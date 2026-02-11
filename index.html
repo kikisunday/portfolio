@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="椎久智也 - フルスタックエンジニアのポートフォリオサイト。5年以上の開発経験、Vue.js/Nuxt.js、TypeScript、AWSなどの技術スキルを紹介。"
+    />
+    <title>椎久智也 | フルスタックエンジニア ポートフォリオ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <a href="#home">T.S Portfolio</a>
+        </div>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-grid"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <!-- <p class="hero-subtitle fade-in">こんにちは、私は</p> -->
+            <h1 class="hero-title fade-in-delay-1">椎久 智也</h1>
+            <h2 class="hero-name-en fade-in-delay-2">Shiiku Tomoya</h2>
+            <p class="hero-role fade-in-delay-3">
+              <span class="typing-text">Fullstack Engineer</span>
+            </p>
+            <p class="hero-description fade-in-delay-4">
+              効率的な開発とチーム貢献を大切にするエンジニアです！
+            </p>
+            <div class="hero-stats fade-in-delay-5">
+              <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">年の経験</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">プロジェクト</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">チームメンバー</div>
+              </div>
+            </div>
+            <div class="hero-cta fade-in-delay-6">
+              <a href="#projects" class="btn btn-primary">
+                <span>プロジェクトを見る</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span>お問い合わせ</span>
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <a href="#about">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <p>Scroll Down</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">私について</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-profile-image">
+            <div class="profile-image-container">
+              <img
+                src="images/profile.jpg"
+                alt="椎久智也のプロフィール画像"
+                class="profile-image"
+              />
+            </div>
+          </div>
+          <div class="about-text">
+            <h3>エンジニアとしての強み</h3>
+            <p class="about-intro">
+              私は<strong>フルスタック開発</strong>を専門とし、<strong>5年1ヶ月</strong>の実務経験を持つエンジニアです。
+              フロントエンドではVue.js/Nuxt.jsとTypeScriptを使用した開発を得意とし、
+              バックエンドではNode.js（Express）を用いたAPI開発の経験があります。
+              また、<strong>2年以上のAIエージェントを活用した開発経験</strong>とローカルLLM環境構築の知見を持ち、
+              AI技術を取り入れた効率的な開発にも対応可能です。
+              基本設計から保守まで幅広い工程を経験してきました。
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="fas fa-tasks"></i>
+                </div>
+                <div class="highlight-content">
+                  <h4>タスク管理と効率化</h4>
+                  <p>
+                    1日ごとの目標設定を定めている習慣があるため、タスク管理や効率的な作業が得意です。ポモドーロテクニックや瞑想を取り入れ、集中力の高い時間を長く生み出す工夫をしています。
+                  </p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <div class="highlight-content">
+                  <h4>継続的な学習</h4>
+                  <p>
+                    業務時間外のキャッチアップも積極的に行い、新しい技術や知識を常に吸収しています。Nuxt2→Nuxt3のマイグレーションなど、最新技術への対応も迅速に行えます。
+                  </p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="highlight-content">
+                  <h4>チーム貢献と教育</h4>
+                  <p>
+                    新規参画者への相談ベースでの教育や質疑応答が得意です。フロントリーダーとして他チームやバックエンドとの窓口を経験し、開発方針を考えるリーダーシップを発揮しています。
+                  </p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div class="highlight-content">
+                  <h4>コミュニケーション重視</h4>
+                  <p>
+                    報連相を細かくするよう意識し、アジャイル開発でのスケジュール管理を徹底。業務的なコミュニケーション以外にもプライベートの話を共有し、チームの雰囲気作りにも貢献しています。
+                  </p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="highlight-content">
+                  <h4>AI/LLM活用スキル</h4>
+                  <p>
+                    2年以上のAIエージェントを活用した開発経験があり、ローカル環境へのLLM構築も実施。AI技術を開発プロセスに取り入れ、生産性向上とコード品質の改善に活かしています。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <!-- <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Gallery</span>
+          <h2 class="section-title">ポートフォリオギャラリー</h2>
+        </div>
+        <div class="gallery-grid">
+          <a href="#" target="_blank" class="gallery-item">
+            <img src="images/portfolio-1.jpg" alt="ポートフォリオ作品1" />
+            <div class="gallery-overlay">
+              <h4>作品タイトル1</h4>
+              <p>作品の説明文</p>
+              <span class="gallery-link"
+                ><i class="fas fa-external-link-alt"></i> リンクを開く</span
+              >
+            </div>
+          </a>
+          <a href="#" target="_blank" class="gallery-item">
+            <img src="images/portfolio-2.jpg" alt="ポートフォリオ作品2" />
+            <div class="gallery-overlay">
+              <h4>作品タイトル2</h4>
+              <p>作品の説明文</p>
+              <span class="gallery-link"
+                ><i class="fas fa-external-link-alt"></i> リンクを開く</span
+              >
+            </div>
+          </a>
+          <a href="#" target="_blank" class="gallery-item">
+            <img src="images/portfolio-3.jpg" alt="ポートフォリオ作品3" />
+            <div class="gallery-overlay">
+              <h4>作品タイトル3</h4>
+              <p>作品の説明文</p>
+              <span class="gallery-link"
+                ><i class="fas fa-external-link-alt"></i> リンクを開く</span
+              >
+            </div>
+          </a>
+          <a href="#" target="_blank" class="gallery-item">
+            <img src="images/portfolio-4.jpg" alt="ポートフォリオ作品4" />
+            <div class="gallery-overlay">
+              <h4>作品タイトル4</h4>
+              <p>作品の説明文</p>
+              <span class="gallery-link"
+                ><i class="fas fa-external-link-alt"></i> リンクを開く</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Skills</span>
+          <h2 class="section-title">スキルセット</h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- 言語 -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-code"></i>
+              <h3>言語</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript / TypeScript</span>
+                  <span class="skill-experience">4年半</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+                <p class="skill-desc">
+                  案件によって適切なコードを書くことが可能
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML / CSS</span>
+                  <span class="skill-experience">4年半</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+                <p class="skill-desc">
+                  案件によって適切なコードを書くことが可能
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-experience">2年</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+                <p class="skill-desc">
+                  案件によって適切なコードを書くことが可能
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-experience">6ヶ月</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="55"></div>
+                </div>
+                <p class="skill-desc">
+                  案件によって適切なコードを書くことが可能
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- フレームワーク -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-layer-group"></i>
+              <h3>フレームワーク</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Vue.js / Nuxt.js</span>
+                  <span class="skill-experience">4年半</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+                <p class="skill-desc">
+                  案件によって適切なコードを書くことが可能（Nuxt2→Nuxt3マイグレーション経験あり）
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">React</span>
+                  <span class="skill-experience">実務経験あり</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+                <p class="skill-desc">Electronアプリの保守・バグ修正経験</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Angular</span>
+                  <span class="skill-experience">8ヶ月</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+                <p class="skill-desc">
+                  案件によって適切なコードを書くことが可能
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Express / Serverless</span>
+                  <span class="skill-experience">2年</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+                <p class="skill-desc">Backend For Frontend開発経験あり</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- インフラ・ツール -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-cloud"></i>
+              <h3>インフラ・ツール</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">AWS</span>
+                  <span class="skill-experience">2年</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+                <p class="skill-desc">
+                  Lambda, DynamoDB, CloudWatch等の基本操作可能
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Azure DevOps</span>
+                  <span class="skill-experience">1年6ヶ月</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+                <p class="skill-desc">基本操作、問題なく対応可能</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Git (GitHub / SourceTree)</span>
+                  <span class="skill-experience">2年</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+                <p class="skill-desc">
+                  バージョン管理、ブランチ戦略、PR運用に精通
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Slack / Teams</span>
+                  <span class="skill-experience">3年</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+                <p class="skill-desc">チームコミュニケーションツールの活用</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">GitHub Copilot</span>
+                  <span class="skill-experience">2年</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+                <p class="skill-desc">AIペアプログラミングによる開発効率化</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">ComfyUI</span>
+                  <span class="skill-experience">1年</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+                <p class="skill-desc">画像生成AIのワークフロー構築・運用</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">プロジェクト実績</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-number">01</div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">
+                  通信キャリアオンラインサイトの開発・保守
+                </h3>
+                <div class="project-meta">
+                  <span class="project-period">
+                    <i class="fas fa-calendar"></i>
+                    2024年4月 〜 現在（1年6ヶ月以上）
+                  </span>
+                  <span class="project-role">
+                    <i class="fas fa-user"></i>
+                    開発メンバー
+                  </span>
+                  <span class="project-team">
+                    <i class="fas fa-users"></i>
+                    100名以上
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h4>業務内容</h4>
+                <ul>
+                  <li>Nuxt2からNuxt3へのマイグレーション対応を主導</li>
+                  <li>Nuxt.jsを使ったフロントエンド開発・保守</li>
+                  <li>
+                    Expressを使ったBFF（Backend For Frontend）・バックエンド開発
+                  </li>
+                  <li>設計やお客様との認識合わせ・調整業務</li>
+                </ul>
+
+                <h4>成果・実績</h4>
+                <ul>
+                  <li>
+                    Nuxt2→Nuxt3マイグレーションを成功させ、パフォーマンス向上を実現
+                  </li>
+                  <li>新規機能開発を継続的に実施し、サービス改善に貢献</li>
+                </ul>
+              </div>
+
+              <div class="project-tags">
+                <span class="tag">Nuxt.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Express</span>
+                <span class="tag">AWS</span>
+                <span class="tag">DynamoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-number">02</div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">インターネットバンキング開発</h3>
+                <div class="project-meta">
+                  <span class="project-period">
+                    <i class="fas fa-calendar"></i>
+                    2022年11月 〜 2024年3月（1年2ヶ月）
+                  </span>
+                  <span class="project-role role-leader">
+                    <i class="fas fa-crown"></i>
+                    フロントリーダー
+                  </span>
+                  <span class="project-team">
+                    <i class="fas fa-users"></i>
+                    100名以上
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h4>業務内容</h4>
+                <ul>
+                  <li>
+                    Nuxt.jsを使ったフロントエンド開発（Nuxt2→Nuxt3マイグレーション）
+                  </li>
+                  <li>
+                    Serverless
+                    Frameworkを使ったBFF開発（クリーンアーキテクチャ）
+                  </li>
+                  <li>AWSインフラ構築（Lambda、DynamoDB、CloudWatch）</li>
+                  <li>
+                    フロントリーダーとして他チームやバックエンドとの窓口業務
+                  </li>
+                </ul>
+
+                <h4>成果・実績</h4>
+                <ul>
+                  <li>複数チーム間の調整を行い、プロジェクトを円滑に進行</li>
+                  <li>
+                    新しい技術（Serverless FW、AWS Lambda）を習得し実務に適用
+                  </li>
+                  <li>保守性・汎用性の高いクリーンアーキテクチャで実装</li>
+                </ul>
+              </div>
+
+              <div class="project-tags">
+                <span class="tag">Nuxt.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Serverless</span>
+                <span class="tag">AWS Lambda</span>
+                <span class="tag">DynamoDB</span>
+                <span class="tag">CloudWatch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-number">03</div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">災害通知アプリの作成</h3>
+                <div class="project-meta">
+                  <span class="project-period">
+                    <i class="fas fa-calendar"></i>
+                    2022年6月 〜 2022年9月（3ヶ月）
+                  </span>
+                  <span class="project-role role-leader">
+                    <i class="fas fa-crown"></i>
+                    リーダー
+                  </span>
+                  <span class="project-team">
+                    <i class="fas fa-users"></i>
+                    21名
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h4>業務内容</h4>
+                <ul>
+                  <li>
+                    社員管理機能の作成（フロント・バックエンド両方を担当）
+                  </li>
+                  <li>Vue.jsによるフロントエンド開発</li>
+                  <li>
+                    Java / Springによるバックエンド開発（初めてのJava開発）
+                  </li>
+                  <li>20名以上の中規模開発でのリーダー業務</li>
+                </ul>
+
+                <h4>成果・実績</h4>
+                <ul>
+                  <li>
+                    初めてのJava開発ながら、業務後のキャッチアップで完成まで遂行
+                  </li>
+                  <li>報連相を意識し、中規模チームでのリーダーシップを発揮</li>
+                  <li>フロント・バックエンドの両方を経験し、技術の幅を拡大</li>
+                </ul>
+              </div>
+
+              <div class="project-tags">
+                <span class="tag">Vue.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Java</span>
+                <span class="tag">Spring</span>
+                <span class="tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-number">04</div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">
+                  建築資材専門商社の顧客管理システム開発
+                </h3>
+                <div class="project-meta">
+                  <span class="project-period">
+                    <i class="fas fa-calendar"></i>
+                    2021年1月 〜 2021年9月（9ヶ月）
+                  </span>
+                  <span class="project-role role-leader">
+                    <i class="fas fa-crown"></i>
+                    リーダー
+                  </span>
+                  <span class="project-team">
+                    <i class="fas fa-users"></i>
+                    8名
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h4>業務内容</h4>
+                <ul>
+                  <li>顧客管理システムの新規開発</li>
+                  <li>Angular（未経験）によるクライアントサイド開発</li>
+                  <li>Pythonによるデータ移行ツール開発</li>
+                  <li>API仕様書の作成</li>
+                </ul>
+
+                <h4>成果・実績</h4>
+                <ul>
+                  <li>当初テスター予定が、能力を評価され開発者として抜擢</li>
+                  <li>
+                    未経験のAngularを短期間でキャッチアップし、メイン開発担当に
+                  </li>
+                  <li>追加開発でもメイン開発担当を任される信頼を獲得</li>
+                </ul>
+              </div>
+
+              <div class="project-tags">
+                <span class="tag">Angular</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="hobbies">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hobbies</span>
+          <h2 class="section-title">趣味・興味</h2>
+        </div>
+        <div class="hobbies-grid">
+          <div class="hobby-card">
+            <div class="hobby-icon">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h3>ゲーム</h3>
+            <p>steamでできるゲームが好きです！</p>
+            <p>バイオハザードシリーズ・ソウルライク・アーマードコアなど</p>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h3>音楽</h3>
+            <p>東京のクラブでDJをしていた経験があります！</p>
+            <p>ジャンル：ハウス、R＆Bなど</p>
+            <div class="hobby-links">
+              <!-- <a href="#" target="_blank" class="hobby-link">
+                <i class="fab fa-youtube"></i> Mix動画を見る
+              </a> -->
+              <!-- <a href="#" target="_blank" class="hobby-link">
+                <i class="fab fa-soundcloud"></i> SoundCloud
+              </a> -->
+            </div>
+          </div>
+          <!-- TODO: ここにいずれミックスやdtmのリンク張る -->
+          <div class="hobby-card">
+            <div class="hobby-icon">
+              <i class="fas fa-dumbbell"></i>
+            </div>
+            <h3>筋トレ</h3>
+            <p>週3~4回ジムに通っています！</p>
+            <p>ベンチは100kg持てることが目標です！</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">お問い合わせ</h2>
+          <p class="section-description">
+            プロジェクトのご相談やお仕事のご依頼は、お気軽にお問い合わせください。<br />
+            新しいチャレンジを楽しみにしています。
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">お名前 <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="山田 太郎"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email"
+                  >メールアドレス <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="example@email.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">件名</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="お仕事のご相談"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message"
+                  >メッセージ <span class="required">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  placeholder="お問い合わせ内容をご記入ください"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span>送信する</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              <h3>送信完了</h3>
+              <p>
+                お問い合わせありがとうございます。<br />内容を確認次第、ご連絡させていただきます。
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h4>所在地</h4>
+              <p>最寄駅：蕨駅</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h4>経験年数</h4>
+              <p>5年1ヶ月の実務経験</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h4>専門分野</h4>
+              <p>
+                フルスタック開発<br />Vue.js / Nuxt.js / TypeScript / Node.js
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2024 Shiiku Tomoya. All rights reserved.</p>
+          <p class="footer-note">
+            Made with <i class="fas fa-heart"></i> and dedication to quality
+            code
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
