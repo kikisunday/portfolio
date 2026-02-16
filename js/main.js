@@ -495,6 +495,16 @@ console.log("%cお仕事のご相談はお気軽に！", "color: #0088ff; font-s
 
 // Add keyboard shortcuts
 document.addEventListener("keydown", (e) => {
+  // フォーム入力中はショートカットを無効化
+  const target = e.target;
+  if (
+    target.tagName === "INPUT" ||
+    target.tagName === "TEXTAREA" ||
+    target.tagName === "SELECT"
+  ) {
+    return;
+  }
+
   // Press 'H' to go to home
   if (e.key === "h" || e.key === "H") {
     document.querySelector("#home").scrollIntoView({ behavior: "smooth" });
