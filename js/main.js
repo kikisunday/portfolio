@@ -189,31 +189,54 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 const contactForm = document.getElementById("contactForm");
 const formSuccess = document.getElementById("formSuccess");
 
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  // Get form data
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
-  };
+    const formData = new FormData(contactForm);
+    const formAction = contactForm.getAttribute("action");
 
-  // Log form data (in production, this would be sent to a server)
-  console.log("Form submitted:", formData);
+    // 未設定の場合は開発用フォールバック
+    if (!formAction || formAction.includes("YOUR_FORM_ID")) {
+      console.warn(
+        "⚠️ Formspree未設定: index.htmlのformタグのactionを変更してください",
+      );
+      contactForm.style.display = "none";
+      formSuccess.classList.add("show");
+      setTimeout(() => {
+        contactForm.reset();
+        contactForm.style.display = "block";
+        formSuccess.classList.remove("show");
+      }, 5000);
+      return;
+    }
 
-  // Show success message
-  contactForm.style.display = "none";
-  formSuccess.classList.add("show");
+    try {
+      const res = await fetch(formAction, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-  // Reset form after 5 seconds
-  setTimeout(() => {
-    contactForm.reset();
-    contactForm.style.display = "block";
-    formSuccess.classList.remove("show");
-  }, 5000);
-});
+      if (res.ok) {
+        contactForm.style.display = "none";
+        formSuccess.classList.add("show");
+        setTimeout(() => {
+          contactForm.reset();
+          contactForm.style.display = "block";
+          formSuccess.classList.remove("show");
+        }, 5000);
+      } else {
+        alert("送信に失敗しました。後ほどお試しください。");
+      }
+    } catch (err) {
+      console.error("送信エラー:", err);
+      alert("送信に失敗しました。ネットワーク接続を確認してください。");
+    }
+  });
+}
 
 // ================================================
 // Typing Effect for Hero Section
