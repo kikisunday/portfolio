@@ -1167,6 +1167,16 @@ section {
   line-height: 1.6;
 }
 
+.info-card a {
+  color: var(--primary-color);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.info-card a:hover {
+  text-decoration: underline;
+}
+
 /* ================================================
    Footer
    ================================================ */
